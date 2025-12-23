@@ -1,0 +1,70 @@
+body {
+    background-color: #f6f6ef;
+    /* Hacker News background */
+    background-image: url('capyfind.png');
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 10pt;
+    color: #000;
+    margin: 0;
+    padding: 8px;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Semi-transparent white */
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.header {
+    background-color: #ff6600;
+    /* Distinctive capy orange? Or HN orange */
+    padding: 2px 5px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.header a {
+    color: #fff;
+}
+
+.search-box {
+    margin-bottom: 20px;
+    background-color: rgba(238, 238, 238, 0.8);
+    /* Semi-transparent grey */
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.result-item {
+    margin-bottom: 12px;
+}
+
+.result-title {
+    font-size: 11pt;
+    margin-bottom: 2px;
+}
+
+.result-meta {
+    font-size: 8pt;
+    color: #828282;
+}
+
+.result-snippet {
+    font-size: 9pt;
+    color: #333;
+    margin-top: 2px;
+}

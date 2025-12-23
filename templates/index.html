@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="search-box">
+    <form action="/search" method="get">
+        <div style="margin-bottom: 10px;">
+            <label style="font-weight: bold;">Search:</label>
+            <input type="text" name="q" size="50" autofocus>
+        </div>
+
+        <div style="margin-bottom: 10px;">
+            <label style="font-weight: bold;">Engines:</label>
+            <input type="checkbox" name="google" id="google" checked> <label for="google">Google</label>
+            <input type="checkbox" name="arxiv" id="arxiv" checked> <label for="arxiv">ArXiv</label>
+        </div>
+
+        <button type="submit">find it</button>
+    </form>
+
+    {% if error %}
+    <div style="color: red; margin-top: 10px;">
+        {{ error }}
+    </div>
+    {% endif %}
+</div>
+
+<div style="margin-top: 40px; text-align: center; color: #828282;">
+    <i>"Don't Worry, Be Capy"</i>
+</div>
+{% endblock %}

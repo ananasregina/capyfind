@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Capyfind{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="/">CAPYFIND</a>
+        </div>
+        
+        {% block content %}{% endblock %}
+        
+        <div style="margin-top: 20px; border-top: 2px solid #ff6600; height: 10px;"></div>
+        <div class="result-meta" style="text-align: center;">
+            No AIs, only Capys.
+        </div>
+    </div>
+</body>
+</html>
