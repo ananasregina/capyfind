@@ -5,9 +5,9 @@
     <form action="/search" method="get">
         <input type="text" name="q" value="{{ query }}" size="40">
         <button type="submit">search again</button>
-        <!-- hidden fields to preserve engine selection? simplified for now -->
-        <input type="hidden" name="google" value="on">
-        <input type="hidden" name="arxiv" value="on">
+        {% if request.args.get('google') == 'on' %}<input type="hidden" name="google" value="on">{% endif %}
+        {% if request.args.get('arxiv') == 'on' %}<input type="hidden" name="arxiv" value="on">{% endif %}
+        {% if request.args.get('tavily') == 'on' %}<input type="hidden" name="tavily" value="on">{% endif %}
     </form>
 </div>
 

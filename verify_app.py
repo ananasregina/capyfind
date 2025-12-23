@@ -1,6 +1,7 @@
 import unittest
 from app import app
 from logic.arxiv_engine import ArxivEngine
+from logic.tavily_engine import TavilyEngine
 
 class TestCapyfind(unittest.TestCase):
     def setUp(self):
@@ -27,6 +28,16 @@ class TestCapyfind(unittest.TestCase):
             self.assertEqual(results[0].source, "ArXiv")
         else:
             print("\n[ArXiv Test] No results or network error")
+
+    def test_tavily_engine_integration(self):
+        # Real network call to Tavily (requires API key)
+        engine = TavilyEngine()
+        results = engine.search("capybara", limit=1)
+        if results:
+            print(f"\n[Tavily Test] Found: {results[0].title}")
+            self.assertEqual(results[0].source, "Tavily")
+        else:
+            print("\n[Tavily Test] No results or network error (or API key not set)")
 
 if __name__ == '__main__':
     unittest.main()
