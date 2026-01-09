@@ -8,6 +8,7 @@ load_dotenv()
 from logic.google_engine import GoogleEngine
 from logic.arxiv_engine import ArxivEngine
 from logic.tavily_engine import TavilyEngine
+from logic.md_kb_engine import MdKbEngine
 from logic.aggregator import SearchAggregator
 
 app = Flask(__name__)
@@ -24,7 +25,8 @@ def search():
     
     use_google = request.args.get('google') == 'on'
     use_arxiv = request.args.get('arxiv') == 'on'
-    
+    use_mdkb = request.args.get('mdkb') == 'on'
+
     engines = []
     if use_google:
         engines.append(GoogleEngine())
@@ -32,7 +34,9 @@ def search():
         engines.append(ArxivEngine())
     if request.args.get('tavily') == 'on':
         engines.append(TavilyEngine())
-        
+    if use_mdkb:
+        engines.append(MdKbEngine())
+
     if not engines:
          return render_template('index.html', error="Please select at least one search engine.")
     
