@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>taliandfriends.capyfind</string>
+    <key>ProgramArguments</key>
+    <array>
+      <string>/Users/talimoreno/Documents/capyfind/.venv/bin/python</string>
+      <string>app.py</string>
+    </array>
+    <key>WorkingDirectory</key>
+    <string>/Users/talimoreno/Documents/capyfind</string>
+    <key>KeepAlive</key>
+    <true/>
+    <key>StandardOutPath</key>
+    <string>/Users/talimoreno/Documents/capyfind/logs/stdout.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/talimoreno/Documents/capyfind/logs/stderr.log</string>
+  </dict>
+</plist>
